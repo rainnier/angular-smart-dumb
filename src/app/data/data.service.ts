@@ -10,8 +10,9 @@ export class DataService {
   constructor() { }
 
   getData() {
-    //NO!
+    //NO! - If you use this - you cannot subscribe anymore in the list component
     //return of(this.data).pipe().subscribe(data => console.log(data))
+
     //Correct
     return of(this.data).pipe();
   }
